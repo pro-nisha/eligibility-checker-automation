@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>selenium</td>
+            <td>19 Oct 2020, 16:41</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">CleanUp.cleanUp()</td>
+              <td>1</td>
+              <td class="duration" data-value="3482400">0.003</td>
+              <td class="duration" data-value="3482400">0.003</td>
+              <td class="duration" data-value="3482400">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.After()</td>
+              <td>1</td>
+              <td class="duration" data-value="783104200">0.783</td>
+              <td class="duration" data-value="783104200">0.783</td>
+              <td class="duration" data-value="783104200">0.783</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hooks.beofore()</td>
+              <td>1</td>
+              <td class="duration" data-value="5353816200">5.353</td>
+              <td class="duration" data-value="5353816200">5.353</td>
+              <td class="duration" data-value="5353816200">5.353</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:103</td>
+              <td>1</td>
+              <td class="duration" data-value="148600">0.000</td>
+              <td class="duration" data-value="148600">0.000</td>
+              <td class="duration" data-value="148600">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:107</td>
+              <td>1</td>
+              <td class="duration" data-value="449532900">0.449</td>
+              <td class="duration" data-value="449532900">0.449</td>
+              <td class="duration" data-value="449532900">0.449</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:113</td>
+              <td>1</td>
+              <td class="duration" data-value="117300">0.000</td>
+              <td class="duration" data-value="117300">0.000</td>
+              <td class="duration" data-value="117300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:116</td>
+              <td>1</td>
+              <td class="duration" data-value="410252400">0.410</td>
+              <td class="duration" data-value="410252400">0.410</td>
+              <td class="duration" data-value="410252400">0.410</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:121</td>
+              <td>1</td>
+              <td class="duration" data-value="81200">0.000</td>
+              <td class="duration" data-value="81200">0.000</td>
+              <td class="duration" data-value="81200">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:124</td>
+              <td>1</td>
+              <td class="duration" data-value="455116900">0.455</td>
+              <td class="duration" data-value="455116900">0.455</td>
+              <td class="duration" data-value="455116900">0.455</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:130</td>
+              <td>1</td>
+              <td class="duration" data-value="70800">0.000</td>
+              <td class="duration" data-value="70800">0.000</td>
+              <td class="duration" data-value="70800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:134</td>
+              <td>1</td>
+              <td class="duration" data-value="483791100">0.483</td>
+              <td class="duration" data-value="483791100">0.483</td>
+              <td class="duration" data-value="483791100">0.483</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:140</td>
+              <td>1</td>
+              <td class="duration" data-value="46535900">0.046</td>
+              <td class="duration" data-value="46535900">0.046</td>
+              <td class="duration" data-value="46535900">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:22</td>
+              <td>1</td>
+              <td class="duration" data-value="2620866200">2.620</td>
+              <td class="duration" data-value="2620866200">2.620</td>
+              <td class="duration" data-value="2620866200">2.620</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:28</td>
+              <td>1</td>
+              <td class="duration" data-value="431955800">0.431</td>
+              <td class="duration" data-value="431955800">0.431</td>
+              <td class="duration" data-value="431955800">0.431</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:34</td>
+              <td>1</td>
+              <td class="duration" data-value="110400">0.000</td>
+              <td class="duration" data-value="110400">0.000</td>
+              <td class="duration" data-value="110400">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:39</td>
+              <td>1</td>
+              <td class="duration" data-value="422505800">0.422</td>
+              <td class="duration" data-value="422505800">0.422</td>
+              <td class="duration" data-value="422505800">0.422</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:45</td>
+              <td>1</td>
+              <td class="duration" data-value="186100">0.000</td>
+              <td class="duration" data-value="186100">0.000</td>
+              <td class="duration" data-value="186100">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:49</td>
+              <td>1</td>
+              <td class="duration" data-value="650576900">0.650</td>
+              <td class="duration" data-value="650576900">0.650</td>
+              <td class="duration" data-value="650576900">0.650</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:60</td>
+              <td>1</td>
+              <td class="duration" data-value="92700">0.000</td>
+              <td class="duration" data-value="92700">0.000</td>
+              <td class="duration" data-value="92700">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:64</td>
+              <td>1</td>
+              <td class="duration" data-value="422869200">0.422</td>
+              <td class="duration" data-value="422869200">0.422</td>
+              <td class="duration" data-value="422869200">0.422</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:72</td>
+              <td>1</td>
+              <td class="duration" data-value="97100">0.000</td>
+              <td class="duration" data-value="97100">0.000</td>
+              <td class="duration" data-value="97100">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:76</td>
+              <td>1</td>
+              <td class="duration" data-value="399149100">0.399</td>
+              <td class="duration" data-value="399149100">0.399</td>
+              <td class="duration" data-value="399149100">0.399</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:82</td>
+              <td>1</td>
+              <td class="duration" data-value="68800">0.000</td>
+              <td class="duration" data-value="68800">0.000</td>
+              <td class="duration" data-value="68800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:86</td>
+              <td>1</td>
+              <td class="duration" data-value="453352500">0.453</td>
+              <td class="duration" data-value="453352500">0.453</td>
+              <td class="duration" data-value="453352500">0.453</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:93</td>
+              <td>1</td>
+              <td class="duration" data-value="114800">0.000</td>
+              <td class="duration" data-value="114800">0.000</td>
+              <td class="duration" data-value="114800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">TestSteps.java:97</td>
+              <td>1</td>
+              <td class="duration" data-value="467915600">0.467</td>
+              <td class="duration" data-value="467915600">0.467</td>
+              <td class="duration" data-value="467915600">0.467</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>26</td>
+            <td class="duration">0.532</td>
+            <td class="duration">5.353</td>
+            <td class="duration">13.855</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

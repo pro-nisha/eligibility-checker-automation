@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="13.861078">
+<testcase classname="Eligibility Checker" name="Verify Eligibility for paid NHS Cost" time="13.861078">
+<system-out><![CDATA[Given User opened NHS website...............................................passed
+When User clicks on start button............................................passed
+Then User should navigate to next Page to select country....................passed
+And select Country as Wales and click on next button........................passed
+Then user should navigate to next page to select date of birth..............passed
+Then enter date of birth  and then click on next button.....................passed
+Then user should navigate to next page to select material status............passed
+And select answer using radio button as Yes and then click on next button...passed
+Then user should navigate to next page to select benefits or tax credits....passed
+And select answer using radio button as No and then click on next button....passed
+Then User should navigate page about pregnancy or birth.....................passed
+And select answer using radio button as No and then click on the next button.passed
+Then User should navigate page about serving in the armed forces............passed
+And user select answer using radio button and click on next button..........passed
+Then User should navigate page about diabetes...............................passed
+And user select answer using radio button for diabetes and click on next....passed
+Then User should navigate page about glaucoma...............................passed
+And user select answer for glaucoma using radio button and click on next....passed
+Then User should navigate page about care home..............................passed
+And user select answer for care home using radio button and click on next...passed
+Then User should navigate page about savings investments or property........passed
+And user select answer for savings investments or property using radio button and click on next.passed
+Then user get the NHS costs.................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
